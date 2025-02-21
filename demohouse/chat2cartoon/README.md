@@ -34,9 +34,11 @@
 - Python 版本要求大于等于 3.8，小于 3.12
 - Poetry 1.6.1 版本 [参考文档](https://python-poetry.org/docs/#installing-with-the-official-installer)
 - Node 版本要求大于等于 16.2.0
-- 火山语音技术（TTS）相关准备工作
-    - 已开通并创建**语音合成大模型**和**流式语音识别大模型**两个服务 [参照文档](https://www.volcengine.com/docs/6561/163043)
-    - 已获取上述两个服务的 appid 和 token [参考文档](https://www.volcengine.com/docs/6561/1329505)
+- 火山语音技术相关准备工作，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**
+  - 已创建一个**语音服务**的应用 [创建链接](https://console.volcengine.com/speech/app)
+  - 对该应用已开通**语音合成大模型**和**流式语音识别大模型**两个服务 [参照文档](https://www.volcengine.com/docs/6561/163043)
+    - 注意：**语音合成大模型**从开通到可以使用有大概5-10分钟延迟
+  - 已获取上述两个服务的 APP ID 和 Access Token [参考文档](https://www.volcengine.com/docs/6561/1329505)
 - 火山方舟 API KEY [参考文档](https://www.volcengine.com/docs/82379/1298459#api-key-%E7%AD%BE%E5%90%8D%E9%89%B4%E6%9D%83)
 - 火山引擎 AK SK [参考文档](https://www.volcengine.com/docs/6291/65568)
 - 火山 TOS 桶 [参考文档](https://www.volcengine.com/docs/6349/74830)
