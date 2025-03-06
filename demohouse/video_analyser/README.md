@@ -54,16 +54,17 @@
      | ------------ | --------------------------------- |
      | VLM_ENDPOINT | doubao-vision-pro 32k endpoint id |
      | LLM_ENDPOINT | doubao-pro 32k endpoint id        |
-     | access_key   | **语音服务**应用 APP ID          |
-     | app_key      | **语音服务**应用 Access Token           |
+     | TTS_APP_ID   | 语音合成模型 APP ID          |
+     | TTS_ACCESS_TOKEN      | 语音合成模型 Access Token           |
 
    - 修改 `frontend/run.sh` 中配置，填入刚刚获取的APP ID和 Access Token
 
 
      | 配置变量名       | 说明                          |
      | ---------------- | ----------------------------- |
-     | APP_ID           | **语音服务**应用 APP_ID |
-     | APP_ACCESS_TOKEN | **语音服务**应用 token  |
+     | ASR_APP_ID           | 流式语音识别模型  APP ID |
+     | ASR_ACCESS_TOKEN | 流式语音识别模型  Access Token  |
+
    - 修改 `backend/run.sh` 中配置，填入刚刚获取的API key
 
 
