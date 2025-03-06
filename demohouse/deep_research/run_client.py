@@ -30,17 +30,16 @@ def main():
     thinking = False
 
     for chunk in stream_resp:
-        if chunk.choices[0].delta.model_extra.get("reasoning_content"):
+        if chunk.choices[0].delta.reasoning_content:
             if not thinking:
                 print("\n----思考过程----\n")
                 thinking = True
-            content = chunk.choices[0].delta.model_extra.get("reasoning_content", "")
-            print(content, end="", flush=True)
+            print(chunk.choices[0].delta.reasoning_content, end="")
         elif chunk.choices[0].delta.content:
             if thinking:
                 print("\n----输出回答----\n")
                 thinking = False
-            print(chunk.choices[0].delta.content, end="", flush=True)
+            print(chunk.choices[0].delta.content, end="")
 
 
 if __name__ == "__main__":
