@@ -340,28 +340,26 @@ Web端和服务端通过二进制协议进行交互，协议格式如下：
 
 ![img_1.png](assets/img_1.png)
 
-# 附录
+## 附录
 
-### 问题1：如何获取 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN？
+### 获取 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN？
 
-#### 问题背景
+1. [完成企业认证](https://console.volcengine.com/user/authentication/detail/)
 
-不清楚从哪里获取应用实验室互动双语视频生成器 Chat2Cartoon，语音实时通话 - 青青，视频实时理解 Video Analyser中的 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN变量值。
+2. [开通语音技术产品](https://console.volcengine.com/speech/app)
 
-#### 解决方案
-
-1. 创建应用，同时勾选大模型语音合成和流式语音识别大模型
+3. [创建应用](https://console.volcengine.com/speech/app)，同时勾选大模型语音合成和流式语音识别大模型
     ![alt text](assets/faq1.png)
 
-2. 开通语音合成大模型，确保页面具有音色。
+4. 开通语音合成大模型，确保页面具有音色。注意：语音合成大模型从开通到可以使用有大概5-10分钟延迟
    ![alt text](assets/faq2.png)
    ![alt text](assets/faq3.png)
 
-3. 流式语音识别大模型有试用包，可以不开通。如需提供稳定服务，建议开通正式版本。
+5. 流式语音识别大模型有试用包，可以不开通。如需提供稳定服务，建议开通正式版本。
    ![alt text](assets/faq4.png)
 
-4. 获取TTS_APP_ID 和TTS_ACCESS_TOKEN
+6. 获取TTS_APP_ID 和TTS_ACCESS_TOKEN
    ![alt text](assets/faq5.png)
 
-5. 获取ASR_APP_ID、ASR_ACCESS_TOKEN
+7. 获取ASR_APP_ID、ASR_ACCESS_TOKEN
    ![alt text](assets/faq6.png)
