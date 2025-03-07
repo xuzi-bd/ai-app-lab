@@ -28,7 +28,7 @@
 - Python 版本要求大于等于 3.8，小于 3.12
 - [Node.js](https://nodejs.org/) (版本 16.2.0 或更高，推荐 Node.js 18 的 LTS 版本)
 - 已获取火山方舟 API Key [参考文档](https://www.volcengine.com/docs/82379/1298459#api-key-%E7%AD%BE%E5%90%8D%E9%89%B4%E6%9D%83)
-- 火山语音技术相关准备工作，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**
+- 火山语音技术相关准备工作，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**，获取方法参见【附录】
   - 已创建一个**语音服务**的应用 [创建链接](https://console.volcengine.com/speech/app) 
   - 对该应用已开通**语音合成大模型**和**流式语音识别大模型**两个服务 [参照文档](https://www.volcengine.com/docs/6561/163043)
     - 注意：**语音合成大模型**从开通到可以使用有大概5-10分钟延迟
@@ -129,3 +129,29 @@
 因此，我们采用了一个简单的优化策略：当抽帧图片进来时，我们使用 VLM 对图片信息进行总结，只将总结信息存下，并使用本地内存存储。这样在模型的 context window 中可以放更多的历史信息，并且延时效果更好。
 
 当然，这个策略也有一定的局限性，部分图片里的信息一定会被丢失。更好的长期记忆和召回策略（比如使用向量召回）会在后续的工作中进行探索。
+
+## 附录
+
+### 问题1：如何获取 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN？
+
+#### 问题背景
+
+不清楚从哪里获取应用实验室互动双语视频生成器 Chat2Cartoon，语音实时通话 - 青青，视频实时理解 Video Analyser中的 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN变量值。
+
+#### 解决方案
+
+1. 创建应用，同时勾选大模型语音合成和流式语音识别大模型
+    ![alt text](assets/faq1.png)
+
+2. 开通语音合成大模型，确保页面具有音色。
+   ![alt text](assets/faq2.png)
+   ![alt text](assets/faq3.png)
+
+3. 流式语音识别大模型有试用包，可以不开通。如需提供稳定服务，建议开通正式版本。
+   ![alt text](assets/faq4.png)
+
+4. 获取TTS_APP_ID 和TTS_ACCESS_TOKEN
+   ![alt text](assets/faq5.png)
+
+5. 获取ASR_APP_ID、ASR_ACCESS_TOKEN
+   ![alt text](assets/faq6.png)

@@ -28,7 +28,7 @@
 
 本项目的整体流程架构如下：
 
-![img.png](img.png)
+![img.png](assets/img.png)
 
 ## 环境准备
 
@@ -36,8 +36,8 @@
 - Python 版本要求大于等于 3.8，小于 3.12
 - Node 18.0 或以上版本 
 - PNPM 8.10 或以上版本
-- 火山 TTS API access [参考文档](https://www.volcengine.com/docs/6561/163043) ，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**
-- 火山 ASR API access [参考文档](https://www.volcengine.com/docs/6561/163043) ，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**
+- 火山 TTS API access [参考文档](https://www.volcengine.com/docs/6561/163043) ，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**，获取方法参见【附录】
+- 火山 ASR API access [参考文档](https://www.volcengine.com/docs/6561/163043) ，**仅对企业客户开放，您可以先完成企业实名认证后接入使用**，获取方法参见【附录】
 - 火山方舟 API KEY [参考文档](https://www.volcengine.com/docs/82379/1298459#api-key-%E7%AD%BE%E5%90%8D%E9%89%B4%E6%9D%83)
 - 火山引擎 AK SK [参考文档](https://www.volcengine.com/docs/6291/65568)
 - 创建 Doubao-Pro 32K 的endpoint [参考文档](https://www.volcengine.com/docs/82379/1099522)
@@ -338,10 +338,30 @@ Web端和服务端通过二进制协议进行交互，协议格式如下：
 
 ### 交互时序示意
 
-![img_1.png](img_1.png)
+![img_1.png](assets/img_1.png)
 
 # 附录
-- ASR API 官方文档: https://www.volcengine.com/docs/6561/1354869
-- TTS API 官方文档: https://www.volcengine.com/docs/6561/1329505
-- TTS 合成音色列表：https://www.volcengine.com/docs/6561/1257544
-- 大模型 API 官方文档：https://www.volcengine.com/docs/82379/1298454
+
+### 问题1：如何获取 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN？
+
+#### 问题背景
+
+不清楚从哪里获取应用实验室互动双语视频生成器 Chat2Cartoon，语音实时通话 - 青青，视频实时理解 Video Analyser中的 TTS_APP_ID、TTS_ACCESS_TOKEN、ASR_APP_ID、ASR_ACCESS_TOKEN变量值。
+
+#### 解决方案
+
+1. 创建应用，同时勾选大模型语音合成和流式语音识别大模型
+    ![alt text](assets/faq1.png)
+
+2. 开通语音合成大模型，确保页面具有音色。
+   ![alt text](assets/faq2.png)
+   ![alt text](assets/faq3.png)
+
+3. 流式语音识别大模型有试用包，可以不开通。如需提供稳定服务，建议开通正式版本。
+   ![alt text](assets/faq4.png)
+
+4. 获取TTS_APP_ID 和TTS_ACCESS_TOKEN
+   ![alt text](assets/faq5.png)
+
+5. 获取ASR_APP_ID、ASR_ACCESS_TOKEN
+   ![alt text](assets/faq6.png)
