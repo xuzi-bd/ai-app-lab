@@ -60,9 +60,8 @@
 
    | 配置变量名               | 说明                                    |
    |:--------------------|:--------------------------------------|
-   | TTS_ACCESS_KEY      | 语音技术 API Access Key                   |
-   | TTS_APP_KEY         | 语音技术 App Key                          |
-   | TTS_API_RESOURCE_ID | 语音技术 API Resource ID                  |
+   | TTS_ACCESS_TOKEN      | 语音合成模型 Access Token                  |
+   | TTS_APP_ID         | 语音合成模型 APP ID                          |
    | ARK_API_KEY         | 火山方舟 API Key，用于方舟模型接入点推理时做鉴权          |
    | VOLC_ACCESSKEY     | 火山引擎账号 Access Key，用于访问 TOS API，上载模型产物 |
    | VOLC_SECRETKEY     | 火山引擎账号 Secret Key，用于访问 TOS API，上载模型产物 |
